@@ -83,10 +83,10 @@ async function opened_connections() {
   }
 }
 
-function status() {
-  version();
-  max_connections();
-  opened_connections();
+async function status() {
+  await version();
+  await max_connections();
+  await opened_connections();
   return config;
 }
 
